@@ -1,0 +1,13 @@
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals.mdf
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals_log.ldf
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals.comLTD.exe.config
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals.comLTD.exe
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals.comLTD.pdb
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.csproj.AssemblyReference.cache
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.login.resources
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.register.resources
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.Properties.Resources.resources
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.csproj.GenerateResource.cache
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.csproj.CoreCompileInputs.cache
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.exe
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.pdb
