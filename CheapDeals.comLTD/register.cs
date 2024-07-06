@@ -180,5 +180,10 @@ namespace CheapDeals.comLTD
                 smtp.Send(message);
             }
         }
+
+        private void lb_signin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
