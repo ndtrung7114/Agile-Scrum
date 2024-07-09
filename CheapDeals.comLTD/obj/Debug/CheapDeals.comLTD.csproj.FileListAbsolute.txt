@@ -1,5 +1,3 @@
-E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals.mdf
-E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals_log.ldf
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals.comLTD.exe.config
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals.comLTD.exe
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\bin\Debug\CheapDeals.comLTD.pdb
@@ -11,3 +9,6 @@ E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.csproj.Ge
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.csproj.CoreCompileInputs.cache
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.exe
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.pdb
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.forgot_password.resources
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.OTPForm.resources
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.reset_password.resources

@@ -61,30 +61,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheapDealsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CheapDealsDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="register_login\forgot_password.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
+    <Compile Include="register_login\forgot_password.Designer.cs">
+      <DependentUpon>forgot_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="register_login\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register_login\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="register.cs">
+    <Compile Include="register_login\OTPForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="register.Designer.cs">
+    <Compile Include="register_login\OTPForm.Designer.cs">
+      <DependentUpon>OTPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="register_login\register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register_login\register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
-    <EmbeddedResource Include="login.resx">
+    <Compile Include="register_login\reset_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register_login\reset_password.Designer.cs">
+      <DependentUpon>reset_password.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="register_login\forgot_password.resx">
+      <DependentUpon>forgot_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register_login\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="register.resx">
+    <EmbeddedResource Include="register_login\OTPForm.resx">
+      <DependentUpon>OTPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register_login\register.resx">
       <DependentUpon>register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -97,17 +115,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="CheapDealsDataSet.xsc">
-      <DependentUpon>CheapDealsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CheapDealsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CheapDealsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CheapDealsDataSet.xss">
-      <DependentUpon>CheapDealsDataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="register_login\reset_password.resx">
+      <DependentUpon>reset_password.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,13 +132,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CheapDeals.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CheapDeals_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CheapDeals.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\obito_80x80.jpg" />
     <None Include="Resources\obito_160x160.jpg" />
   </ItemGroup>
