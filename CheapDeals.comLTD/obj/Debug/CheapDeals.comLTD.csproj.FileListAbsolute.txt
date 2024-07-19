@@ -12,3 +12,4 @@ E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.pdb
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.forgot_password.resources
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.OTPForm.resources
 E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.reset_password.resources
+E:\hoc tap\ki5\thay tuan\CheapDeals.comLTD\obj\Debug\CheapDeals.comLTD.main_system.resources
