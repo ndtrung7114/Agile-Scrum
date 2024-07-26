@@ -10,11 +10,34 @@ namespace CheapDeals.comLTD
     public partial class main_system : Form
     {
         private SqlConnection connect = new SqlConnection(Database_config.ConnectionString);
+        private product_detail productDetailControl;
 
         public main_system()
         {
             InitializeComponent();
             load_product();
+            dataGridView1.CellClick += dataGridView1_CellClick;
+
+            // Initialize the product_detail control
+            productDetailControl = new product_detail();
+            this.Controls.Add(productDetailControl);
+            productDetailControl.Dock = DockStyle.Fill;
+            productDetailControl.Hide();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Ensure the click is on a valid row
+            if (e.RowIndex >= 0)
+            {
+                // Get the product_id from the clicked row
+                int product_id = (int)dataGridView1.Rows[e.RowIndex].Cells["id"].Value;
+
+                // Show the product_detail user control and load product details
+                productDetailControl.Show();
+                productDetailControl.BringToFront();
+                productDetailControl.load_product_detail(product_id);
+            }
         }
 
         private void kb_exit_Click(object sender, EventArgs e)
@@ -66,11 +89,11 @@ namespace CheapDeals.comLTD
                     string name = reader.GetString(1);
                     string type = reader.GetString(2);
                     double price = reader.GetDouble(3);
-                    string imagePath = reader.GetString(4);
+                    string imagePath = reader.IsDBNull(4) ? null : reader.GetString(4);
 
                     // Convert image path to Image object
                     Image productImage = null;
-                    if (File.Exists(imagePath))
+                    if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                     {
                         using (var stream = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
                         {
@@ -94,7 +117,6 @@ namespace CheapDeals.comLTD
                 connect.Close();
             }
         }
-
 
 
         private Image ResizeImage(Image img, int width, int height)
@@ -151,10 +173,13 @@ namespace CheapDeals.comLTD
             load_product(typeFilter, searchText);
         }
 
-
         private void tb_search_TextChanged(object sender, EventArgs e)
         {
             ApplyFilter();
+        }
+
+        private void main_system_Load(object sender, EventArgs e)
+        {
         }
     }
 }

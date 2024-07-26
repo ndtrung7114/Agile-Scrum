@@ -16,7 +16,7 @@ namespace CheapDeals.comLTD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new register());
+            Application.Run(new login());
         }
     }
 }

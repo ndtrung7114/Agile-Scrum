@@ -36,14 +36,14 @@
             this.cb_tablet = new System.Windows.Forms.CheckBox();
             this.cb_mobile = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tab_deal = new System.Windows.Forms.TabPage();
-            this.tab_package = new System.Windows.Forms.TabPage();
-            this.kb_exit = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tab_deal = new System.Windows.Forms.TabPage();
+            this.tab_package = new System.Windows.Forms.TabPage();
+            this.kb_exit = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tab_product.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,10 +54,10 @@
             this.tabControl1.Controls.Add(this.tab_product);
             this.tabControl1.Controls.Add(this.tab_deal);
             this.tabControl1.Controls.Add(this.tab_package);
-            this.tabControl1.Location = new System.Drawing.Point(1, 12);
+            this.tabControl1.Location = new System.Drawing.Point(1, 26);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(516, 756);
+            this.tabControl1.Size = new System.Drawing.Size(426, 742);
             this.tabControl1.TabIndex = 1;
             // 
             // tab_product
@@ -71,7 +71,7 @@
             this.tab_product.Location = new System.Drawing.Point(4, 25);
             this.tab_product.Name = "tab_product";
             this.tab_product.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_product.Size = new System.Drawing.Size(508, 727);
+            this.tab_product.Size = new System.Drawing.Size(418, 713);
             this.tab_product.TabIndex = 0;
             this.tab_product.Text = "Product";
             this.tab_product.UseVisualStyleBackColor = true;
@@ -139,39 +139,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(496, 576);
+            this.dataGridView1.Size = new System.Drawing.Size(407, 576);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // tab_deal
-            // 
-            this.tab_deal.Location = new System.Drawing.Point(4, 25);
-            this.tab_deal.Name = "tab_deal";
-            this.tab_deal.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_deal.Size = new System.Drawing.Size(508, 727);
-            this.tab_deal.TabIndex = 1;
-            this.tab_deal.Text = "Deal";
-            this.tab_deal.UseVisualStyleBackColor = true;
-            // 
-            // tab_package
-            // 
-            this.tab_package.Location = new System.Drawing.Point(4, 25);
-            this.tab_package.Name = "tab_package";
-            this.tab_package.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_package.Size = new System.Drawing.Size(508, 727);
-            this.tab_package.TabIndex = 2;
-            this.tab_package.Text = "Package";
-            this.tab_package.UseVisualStyleBackColor = true;
-            // 
-            // kb_exit
-            // 
-            this.kb_exit.AutoSize = true;
-            this.kb_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kb_exit.Location = new System.Drawing.Point(379, 10);
-            this.kb_exit.Name = "kb_exit";
-            this.kb_exit.Size = new System.Drawing.Size(26, 25);
-            this.kb_exit.TabIndex = 2;
-            this.kb_exit.Text = "X";
-            this.kb_exit.Click += new System.EventHandler(this.kb_exit_Click);
             // 
             // id
             // 
@@ -211,11 +180,43 @@
             this.image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.image.Width = 125;
             // 
+            // tab_deal
+            // 
+            this.tab_deal.Location = new System.Drawing.Point(4, 25);
+            this.tab_deal.Name = "tab_deal";
+            this.tab_deal.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_deal.Size = new System.Drawing.Size(418, 713);
+            this.tab_deal.TabIndex = 1;
+            this.tab_deal.Text = "Deal";
+            this.tab_deal.UseVisualStyleBackColor = true;
+            // 
+            // tab_package
+            // 
+            this.tab_package.Location = new System.Drawing.Point(4, 25);
+            this.tab_package.Name = "tab_package";
+            this.tab_package.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_package.Size = new System.Drawing.Size(418, 713);
+            this.tab_package.TabIndex = 2;
+            this.tab_package.Text = "Package";
+            this.tab_package.UseVisualStyleBackColor = true;
+            // 
+            // kb_exit
+            // 
+            this.kb_exit.AutoSize = true;
+            this.kb_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kb_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kb_exit.Location = new System.Drawing.Point(401, -2);
+            this.kb_exit.Name = "kb_exit";
+            this.kb_exit.Size = new System.Drawing.Size(26, 25);
+            this.kb_exit.TabIndex = 2;
+            this.kb_exit.Text = "X";
+            this.kb_exit.Click += new System.EventHandler(this.kb_exit_Click);
+            // 
             // main_system
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 780);
+            this.ClientSize = new System.Drawing.Size(430, 780);
             this.Controls.Add(this.kb_exit);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

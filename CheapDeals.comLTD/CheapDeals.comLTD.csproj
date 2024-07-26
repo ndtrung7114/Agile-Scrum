@@ -68,6 +68,12 @@
     <Compile Include="main_system.Designer.cs">
       <DependentUpon>main_system.cs</DependentUpon>
     </Compile>
+    <Compile Include="product_detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="product_detail.Designer.cs">
+      <DependentUpon>product_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="register_login\forgot_password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="main_system.resx">
       <DependentUpon>main_system.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="product_detail.resx">
+      <DependentUpon>product_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="register_login\forgot_password.resx">
       <DependentUpon>forgot_password.cs</DependentUpon>

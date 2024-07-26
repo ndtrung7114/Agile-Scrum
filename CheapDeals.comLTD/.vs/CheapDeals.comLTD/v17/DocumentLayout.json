@@ -1,12 +1,136 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|solutionrelative:main_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|e:\\hoc tap\\ki5\\thay tuan\\cheapdeals.comltd\\register_login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|solutionrelative:register_login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|e:\\hoc tap\\ki5\\thay tuan\\cheapdeals.comltd\\register_login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|solutionrelative:register_login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\product_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|solutionrelative:product_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\product_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|solutionrelative:product_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|solutionrelative:main_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E96C048-8F03-4F06-A102-E0F75FBE3D31}|CheapDeals.comLTD.csproj|solutionrelative:main_system.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "product_detail.cs",
+              "DocumentMoniker": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\product_detail.cs",
+              "RelativeDocumentMoniker": "product_detail.cs",
+              "ToolTip": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\product_detail.cs",
+              "RelativeToolTip": "product_detail.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwCkAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T03:49:50.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "product_detail.cs [Design]",
+              "DocumentMoniker": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\product_detail.cs",
+              "RelativeDocumentMoniker": "product_detail.cs",
+              "ToolTip": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\product_detail.cs [Design]",
+              "RelativeToolTip": "product_detail.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T03:45:52.04Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main_system.cs",
+              "DocumentMoniker": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.cs",
+              "RelativeDocumentMoniker": "main_system.cs",
+              "ToolTip": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.cs",
+              "RelativeToolTip": "main_system.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAACEAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T13:55:42.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main_system.cs [Design]",
+              "DocumentMoniker": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.cs",
+              "RelativeDocumentMoniker": "main_system.cs",
+              "ToolTip": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.cs [Design]",
+              "RelativeToolTip": "main_system.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T04:33:12.296Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "login.cs",
+              "DocumentMoniker": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\register_login\\login.cs",
+              "RelativeDocumentMoniker": "register_login\\login.cs",
+              "ToolTip": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\register_login\\login.cs",
+              "RelativeToolTip": "register_login\\login.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAswJQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T00:50:22.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\register_login\\login.cs",
+              "RelativeDocumentMoniker": "register_login\\login.cs",
+              "ToolTip": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\register_login\\login.cs [Design]",
+              "RelativeToolTip": "register_login\\login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T00:50:35.962Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "main_system.Designer.cs",
+              "DocumentMoniker": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.Designer.cs",
+              "RelativeDocumentMoniker": "main_system.Designer.cs",
+              "ToolTip": "E:\\hoc tap\\ki5\\thay tuan\\CheapDeals.comLTD\\main_system.Designer.cs",
+              "RelativeToolTip": "main_system.Designer.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T04:39:47.157Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
