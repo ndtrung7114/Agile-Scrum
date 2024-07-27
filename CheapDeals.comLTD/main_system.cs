@@ -32,11 +32,13 @@ namespace CheapDeals.comLTD
             {
                 // Get the product_id from the clicked row
                 int product_id = (int)dataGridView1.Rows[e.RowIndex].Cells["id"].Value;
+                string type = dataGridView1.Rows[e.RowIndex].Cells["type"].Value.ToString();
 
                 // Show the product_detail user control and load product details
                 productDetailControl.Show();
                 productDetailControl.BringToFront();
-                productDetailControl.load_product_detail(product_id);
+                productDetailControl.product_id = product_id;
+                productDetailControl.load_product_detail(product_id, type);
             }
         }
 
@@ -45,12 +47,21 @@ namespace CheapDeals.comLTD
             Application.Exit();
         }
 
-        private void load_product(string typeFilter = "", string searchText = "")
+        private void load_product(string typeFilter = "", string searchText = "", bool isPackage = false)
         {
             try
             {
                 connect.Open();
-                string query = "SELECT product_id, name, type, price, image FROM Product";
+                string query = "";
+
+                if (isPackage)
+                {
+                    query = "SELECT package_id AS id, name AS item_name, 'package' AS item_type, price AS item_price, NULL AS item_image FROM Package";
+                }
+                else
+                {
+                    query = "SELECT product_id AS id, name AS item_name, type AS item_type, price AS item_price, image AS item_image FROM Product";
+                }
 
                 // Build the filter string
                 string filter = "";
@@ -85,25 +96,25 @@ namespace CheapDeals.comLTD
                 // Read data from the database and add to DataGridView
                 while (reader.Read())
                 {
-                    int productId = reader.GetInt32(0);
+                    int id = reader.GetInt32(0);
                     string name = reader.GetString(1);
                     string type = reader.GetString(2);
                     double price = reader.GetDouble(3);
                     string imagePath = reader.IsDBNull(4) ? null : reader.GetString(4);
 
                     // Convert image path to Image object
-                    Image productImage = null;
+                    Image itemImage = null;
                     if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                     {
                         using (var stream = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
                         {
                             Image originalImage = Image.FromStream(stream);
-                            productImage = ResizeImage(originalImage, 50, 50);
+                            itemImage = ResizeImage(originalImage, 50, 50);
                         }
                     }
 
-                    // Add a new row with the product details
-                    dataGridView1.Rows.Add(productId, name, type, price, productImage);
+                    // Add a new row with the item details
+                    dataGridView1.Rows.Add(id, name, type, price, itemImage);
                 }
 
                 reader.Close();
@@ -148,6 +159,7 @@ namespace CheapDeals.comLTD
         {
             string typeFilter = "";
             string searchText = tb_search.Text.Trim();
+            bool isPackage = cb_package.Checked;
 
             if (cb_mobile.Checked)
             {
@@ -170,7 +182,7 @@ namespace CheapDeals.comLTD
                 typeFilter += "type = 'rauter'";
             }
 
-            load_product(typeFilter, searchText);
+            load_product(typeFilter, searchText, isPackage);
         }
 
         private void tb_search_TextChanged(object sender, EventArgs e)
@@ -180,6 +192,11 @@ namespace CheapDeals.comLTD
 
         private void main_system_Load(object sender, EventArgs e)
         {
+        }
+
+        private void cb_package_CheckedChanged(object sender, EventArgs e)
+        {
+            ApplyFilter();
         }
     }
 }
