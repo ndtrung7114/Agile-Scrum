@@ -17,6 +17,7 @@ namespace CheapDeals.comLTD
     {
         private SqlConnection connect = new SqlConnection(Database_config.ConnectionString);
         public int product_id;
+        public string type;
         public product_detail()
         {
             InitializeComponent();
@@ -33,7 +34,9 @@ namespace CheapDeals.comLTD
         }
 
         public void load_product_detail(int id, string type)
+
         {
+            this.type = type;
             // Connection string (replace with your actual connection string)
             string connectionString = Database_config.ConnectionString;
             
@@ -52,12 +55,39 @@ namespace CheapDeals.comLTD
                         label3.Visible = false;
                         label2.Text = "Packge Detail";
                     }
+                    else if (type == "deal")
+                    {
+                        query = "SELECT name, type, price, date, description, image FROM Deal WHERE deal_id = @id";
+                        list_package.Visible = false;
+                        label3.Visible = false;
+                        lb_back.Visible = false;
+                        label2.Text = "Deal Detail";
+                        using (SqlCommand cmd = new SqlCommand(query, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@id", id);
+
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    tb_name.Text = reader["name"].ToString();
+                                    tb_type.Text = reader["type"].ToString();
+                                    tb_price.Text = reader["price"].ToString();
+                                    tb_date.Text = reader["date"].ToString();
+                                    tb_description.Text = reader["description"].ToString();
+
+                                }
+                            }
+                        }
+                        return;
+                    }
                     else
                     {
                         query = "SELECT name, type, price, debut_date, description, image FROM Product WHERE product_id = @id";
                         list_package.Visible = true;
                         label3.Visible = true;
                         lb_back.Visible = false;
+                        label2.Text = "Product Detail";
                     }
 
                     using (SqlCommand cmd = new SqlCommand(query, connect))
@@ -75,7 +105,7 @@ namespace CheapDeals.comLTD
                                 tb_description.Text = reader["description"].ToString();
 
                                 // Load and display the image if it's a product
-                                if (type != "package")
+                                if (type != "package" )
                                 {
                                     string imagePath = reader["image"].ToString();
                                     if (File.Exists(imagePath))
@@ -100,7 +130,7 @@ namespace CheapDeals.comLTD
                         }
                     }
 
-                    if (type != "package")
+                    if ( type != "deal" && type != "package" )
                     {
                         string query_related_package = @"
                     SELECT p.name 
