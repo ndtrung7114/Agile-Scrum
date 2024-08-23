@@ -9,10 +9,11 @@ namespace CheapDeals.comLTD
 {
     public partial class main_system : Form
     {
+        private string loggedInUsername;
         private SqlConnection connect = new SqlConnection(Database_config.ConnectionString);
         private product_detail productDetailControl;
 
-        public main_system()
+        public main_system(string user_name)
         {
             InitializeComponent();
             load_product();
@@ -23,6 +24,8 @@ namespace CheapDeals.comLTD
             datagridview_deal.CellClick += datagridview_deal_CellContentClick;
             Hide_datagridview1();
             lb_back.Visible = false;
+            this.loggedInUsername = user_name;
+            MessageBox.Show("Welcome, " + loggedInUsername + "!");
 
 
              
@@ -48,7 +51,8 @@ namespace CheapDeals.comLTD
                 productDetailControl.Show();
                 productDetailControl.BringToFront();
                 productDetailControl.product_id = product_id; //product_id có thể là id của product, deal, package
-                productDetailControl.load_product_detail(product_id, type);
+                
+                productDetailControl.load_product_detail(product_id, type, loggedInUsername);
             }
         }
 
@@ -346,7 +350,7 @@ namespace CheapDeals.comLTD
                 productDetailControl.Show();
                 productDetailControl.BringToFront();
                 productDetailControl.product_id = product_id; // ở đây thì product_id là id của deal
-                productDetailControl.load_product_detail(product_id, type);
+                productDetailControl.load_product_detail(product_id, type, loggedInUsername);
             }
 
         }
@@ -363,7 +367,7 @@ namespace CheapDeals.comLTD
                 productDetailControl.Show();
                 productDetailControl.BringToFront();
                 productDetailControl.product_id = product_id; // ở đây thì product_id là id của product
-                productDetailControl.load_product_detail(product_id, type);
+                productDetailControl.load_product_detail(product_id, type, loggedInUsername);
             }
 
         }
@@ -380,7 +384,7 @@ namespace CheapDeals.comLTD
                 productDetailControl.Show();
                 productDetailControl.BringToFront();
                 productDetailControl.product_id = product_id;  // ở đây thì product_id là id của package
-                productDetailControl.load_product_detail(product_id, type);
+                productDetailControl.load_product_detail(product_id, type, loggedInUsername);
             }
 
         }

@@ -136,7 +136,7 @@ namespace CheapDeals.comLTD
                 if (correct_account)
                 {
                     MessageBox.Show("User signed in successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    main_system main = new main_system();
+                    main_system main = new main_system(username);
                     main.Show();
                     this.Hide();
                     // Proceed to the next form or main application

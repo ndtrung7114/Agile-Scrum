@@ -18,10 +18,12 @@ namespace CheapDeals.comLTD
         private SqlConnection connect = new SqlConnection(Database_config.ConnectionString);
         public int product_id;
         public string type;
+        public string logged_username;
         public product_detail()
         {
             InitializeComponent();
             lb_back.Visible = false;
+            
            
           
         }
@@ -31,12 +33,14 @@ namespace CheapDeals.comLTD
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            load_product_detail(product_id, "product", logged_username);
         }
 
-        public void load_product_detail(int id, string type)
+        public void load_product_detail(int id, string type, string username)
 
         {
             this.type = type;
+            logged_username = username;
             // Connection string (replace with your actual connection string)
             string connectionString = Database_config.ConnectionString;
             
@@ -216,7 +220,7 @@ namespace CheapDeals.comLTD
                         int package_id = Convert.ToInt32(result);
 
                         // Load subjects for the selected semester
-                        load_product_detail(package_id, "package");
+                        load_product_detail(package_id, "package", logged_username);
                         lb_back.Visible = true;
                     }
                 }
@@ -226,8 +230,91 @@ namespace CheapDeals.comLTD
 
         private void lb_back_Click(object sender, EventArgs e)
         {
-            load_product_detail(product_id, "product");
+            load_product_detail(product_id, "product", logged_username);
             
+        }
+
+        private void btn_like_Click(object sender, EventArgs e)
+        {
+            string queryCheckLike = "SELECT COUNT(*) FROM Tracking_like_product WHERE username = @username AND id_product = @id AND type = @type";
+            string queryUpdateLike = string.Empty;
+            string queryInsertTracking = "INSERT INTO Tracking_like_product (username, id_product, type) VALUES (@username, @id, @type)";
+
+            // Determine the correct update query based on the type
+            if (type == "deal")
+            {
+                queryUpdateLike = "UPDATE Deal SET likes = likes + 1 WHERE deal_id = @id";
+            }
+            else if (type == "package")
+            {
+                queryUpdateLike = "UPDATE Package SET likes = likes + 1 WHERE package_id = @id";
+            }
+            else
+            {
+                queryUpdateLike = "UPDATE Product SET likes = likes + 1 WHERE product_id = @id";
+            }
+
+            try
+            {
+                using (SqlCommand cmdCheckLike = new SqlCommand(queryCheckLike, connect))
+                {
+                    cmdCheckLike.Parameters.AddWithValue("@username", logged_username);
+                    cmdCheckLike.Parameters.AddWithValue("@id", product_id);
+                    cmdCheckLike.Parameters.AddWithValue("@type", type);
+
+                    if (connect.State == ConnectionState.Closed)
+                    {
+                        connect.Open();
+                    }
+
+                    int likeCount = (int)cmdCheckLike.ExecuteScalar();
+
+                    if (likeCount > 0)
+                    {
+                        MessageBox.Show("You have already liked this item.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    using (SqlTransaction transaction = connect.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Update like count
+                            using (SqlCommand cmdUpdateLike = new SqlCommand(queryUpdateLike, connect, transaction))
+                            {
+                                cmdUpdateLike.Parameters.AddWithValue("@id", product_id);
+                                cmdUpdateLike.ExecuteNonQuery();
+                            }
+
+                            // Insert tracking record
+                            using (SqlCommand cmdInsertTracking = new SqlCommand(queryInsertTracking, connect, transaction))
+                            {
+                                cmdInsertTracking.Parameters.AddWithValue("@username", logged_username);
+                                cmdInsertTracking.Parameters.AddWithValue("@id", product_id);
+                                cmdInsertTracking.Parameters.AddWithValue("@type", type);
+                                cmdInsertTracking.ExecuteNonQuery();
+                            }
+
+                            transaction.Commit();
+                            MessageBox.Show("Like updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("An error occurred while updating the like: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect.Close();
+            }
+
         }
     }
 }
